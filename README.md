@@ -9,10 +9,10 @@
 
 ##Components
 siSPOTR Project is made of four major components
-*JNISuffixTrie - Details
-*JNISuffixTrieNative - navive c version of the Trie
-*base - Database Access layer
-*webapp - JAVA Spring/Hibernate Application
+* JNISuffixTrie - Details
+* JNISuffixTrieNative - navive c version of the Trie
+* base - Database Access layer
+* webapp - JAVA Spring/Hibernate Application
 
 
 

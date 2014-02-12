@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="SampleOld" path="/SampleOld" reloadable="true">
+	<Resource auth="Container" driverClassName="org.postgresql.Driver"
+		maxActive="20" maxIdle="10" maxWait="-1" name="jdbc/SampleOld"
+		password="@DB_PASSWD@" removeAbandoned="true" testWhileIdle="true"
+		timeBetweenEvictionRunsMillis="60000" type="javax.sql.DataSource"
+		url="@DB_URL@"
+		username="@DB_USER@" validationQuery="select version()" />
+
+
+</Context>

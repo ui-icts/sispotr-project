@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="SafeSeed" path="/SafeSeed" reloadable="true">
+	<Resource auth="Container" driverClassName="org.postgresql.Driver"
+		maxActive="20" maxIdle="10" maxWait="-1" name="jdbc/SafeSeed"
+		password="test" removeAbandoned="true" testWhileIdle="true"
+		timeBetweenEvictionRunsMillis="60000" type="javax.sql.DataSource"
+		url="jdbc:postgresql://localhost/test"
+		username="test" validationQuery="select version()" />
+
+</Context>

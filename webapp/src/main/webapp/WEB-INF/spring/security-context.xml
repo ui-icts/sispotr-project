@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+
+    <global-method-security pre-post-annotations="enabled">
+    </global-method-security>
+
+    <http use-expressions="true">
+<!--        <intercept-url pattern="/admin/**" access="hasRole('ROLE_ICTS-DEVSUPPORT')"/>-->
+        <intercept-url pattern="/admin/**" access="hasRole('10')" />
+        <intercept-url pattern="/safeseed/**" access="hasRole('10')" />
+        <intercept-url pattern="/results.html" access="isAuthenticated()" />
+        <intercept-url pattern="/ictsmonitoring/**" access="hasRole('10')" />
+<!--        <intercept-url pattern="/**" access="permitAll" />-->
+        <form-login login-page="/login.html"    authentication-failure-url="/login.html?login_error=1" default-target-url="/tools/sispotr/design.html"  />
+<!--        <custom-filter position="FORM_LOGIN_FILTER"  ref="customFilter" />-->
+     
+<!--        <form-login />-->
+        <logout logout-success-url="/logout.html" />
+        <remember-me />
+<!--
+    Uncomment to enable X509 client authentication support
+        <x509 />
+-->
+        <!-- Uncomment to limit the number of sessions a user can have -->
+        <session-management>
+        <concurrency-control max-sessions="5" error-if-maximum-exceeded="true" />
+        </session-management>
+
+    </http>
+    
+    
+    <beans:bean id="myDataSource" class="org.springframework.jndi.JndiObjectFactoryBean" >
+		<beans:property name="jndiName"><beans:value>java:comp/env/jdbc/SafeSeed</beans:value></beans:property>
+	</beans:bean>
+    
+
+    <authentication-manager>
+
+  		<authentication-provider>
+  		<password-encoder hash="md5">
+  		</password-encoder>
+
+			<jdbc-user-service data-source-ref="myDataSource"
+				users-by-username-query="SELECT username, password, 'true' as enabled FROM safeseed.person  WHERE username = ? AND password IS NOT NULL AND password != ''"
+				authorities-by-username-query="SELECT username, access_level as authority FROM safeseed.person  WHERE username = ?"
+				 />
+		</authentication-provider>
+
+
+    </authentication-manager>
+    
+    
+    
+
+</beans:beans>

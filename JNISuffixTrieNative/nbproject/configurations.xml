@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="79">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>JNISuffixTrie.cpp</itemPath>
+      <itemPath>JNISuffixTrieNative.h</itemPath>
+      <itemPath>JNISuffixTrieSearch_LiteNative.h</itemPath>
+      <itemPath>JNISuffixTrie_LiteNative.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>GNU|GNU</compilerSet>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>/Library/Java/Home/include</pElem>
+            <pElem>../../Desktop/CPP/boost_1_46_1</pElem>
+          </incDir>
+          <commandLine>-shared -m64</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>dist/libJNISuffixTrieNative.so</output>
+          <linkerAddLib>
+            <pElem>/Users/ray/Desktop/CPP/boost_1_46_1</pElem>
+          </linkerAddLib>
+        </linkerTool>
+      </compileType>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>GNU|GNU</compilerSet>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>D:/Program Files/Java/jdk1.6.0_05/include</pElem>
+            <pElem>D:/Program Files/Java/jdk1.6.0_05/include/win32</pElem>
+            <pElem>D:/Documents and Settings/Ray/Desktop/Docs/CPP/boost_1_46_1</pElem>
+          </incDir>
+          <commandLine>-shared -m64</commandLine>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <output>dist/libJNISuffixTrieNative.so</output>
+          <linkerAddLib>
+            <pElem>/Users/ray/Desktop/CPP/boost_1_46_1</pElem>
+          </linkerAddLib>
+        </linkerTool>
+      </compileType>
+    </conf>
+  </confs>
+</configurationDescriptor>

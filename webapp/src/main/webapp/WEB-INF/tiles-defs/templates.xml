@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	
+	<definition name="baseTemplateWide" template="/WEB-INF/templates/baseTemplateWide.jsp">
+		<put-attribute name="head" value="/WEB-INF/templates/head.jsp" />
+		<put-attribute name="roof" value="/WEB-INF/templates/roof.jsp" />
+		<put-attribute name="branding" value="/WEB-INF/templates/branding.jsp" />
+		<put-attribute name="nav" value="/WEB-INF/templates/nav.jsp" />
+		<put-attribute name="topnav" value="/WEB-INF/templates/topnav.jsp" />
+			<put-attribute name="menu"   value="/WEB-INF/jsp/menu.jsp"/>
+		<put-attribute name="body" value="/WEB-INF/templates/blank.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/templates/footer.jsp" />
+		
+	</definition>
+	
+	<definition name="baseTemplate" template="/WEB-INF/templates/baseTemplate.jsp">
+		<put-attribute name="head" value="/WEB-INF/templates/head.jsp" />
+		<put-attribute name="roof" value="/WEB-INF/templates/roof.jsp" />
+		<put-attribute name="branding" value="/WEB-INF/templates/branding.jsp" />
+		<put-attribute name="nav" value="/WEB-INF/templates/nav.jsp" />
+		<put-attribute name="topnav" value="/WEB-INF/templates/topnav.jsp" />
+		<put-attribute name="menu"   value="/WEB-INF/jsp/menu.jsp"/>
+		<put-attribute name="menu-sub"   value="/WEB-INF/templates/blank.jsp"/>    
+		<put-attribute name="body" value="/WEB-INF/templates/blank.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/templates/footer.jsp" />
+		 
+	</definition>
+	
+	<definition name="noFrameTemplate" template="/WEB-INF/templates/baseTemplateNoFrame.jsp">
+		<put-attribute name="head" value="/WEB-INF/templates/head.jsp" />
+ 		<put-attribute name="body" value="/WEB-INF/templates/blank.jsp" />
+	</definition>
+  
+  
+    <definition name="reviewerLoginTemplate" template="/WEB-INF/templates/baseTemplateJustFooter.jsp">
+    <put-attribute name="head" value="/WEB-INF/templates/head.jsp" />
+    <put-attribute name="body" value="/WEB-INF/templates/blank.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/templates/footer.jsp" />
+  </definition>
+	
+	<definition name="emptyTemplate" template="/WEB-INF/templates/baseTemplateEmpty.jsp">
+		<put-attribute name="head" value="/WEB-INF/templates/head.jsp" />
+ 		<put-attribute name="body" value="/WEB-INF/templates/blank.jsp" />
+	</definition>
+	
+	<definition name="bodyOnlyTemplate" template="/WEB-INF/templates/baseTemplateBodyOnly.jsp">
+ 		<put-attribute name="body" value="/WEB-INF/templates/blank.jsp" />
+	</definition>
+
+	 <definition name="loginTemplate" extends="baseTemplateWide">
+   		<put-attribute name="body" value="/WEB-INF/templates/blank.jsp" />
+ 	</definition>
+
+ 	
+ 	 <definition name="mainTemplate" extends="baseTemplate">
+   		<put-attribute name="body" value="/WEB-INF/templates/blank.jsp" />
+   		<put-attribute name="menu"   value="/WEB-INF/jsp/menu.jsp"/>
+   		<put-attribute name="menu-sub"   value="/WEB-INF/jsp/menu-sub.jsp"/>
+   		<put-attribute name="topnav" value="/WEB-INF/templates/topnav.jsp" />         
+ 	</definition>
+ 	
+ 	<definition name="noCrumbMainTemplate" extends="baseTemplate">
+   		<put-attribute name="body" value="/WEB-INF/templates/blank.jsp" />
+   		<put-attribute name="menu"   value="/WEB-INF/jsp-generated/menu.jsp"/>  
+ 	</definition>
+ 	
+ 	<definition name="indexTemplate" extends="baseTemplate">
+   		<put-attribute name="body" value="/WEB-INF/templates/blank.jsp" /> 
+   		<put-attribute name="menu"   value="/WEB-INF/jsp/menu.jsp"/>        
+ 	</definition>
+ 	
+</tiles-definitions>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                             http://www.springframework.org/schema/tx 
+       http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+       http://www.springframework.org/schema/aop 
+       http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+       ">
+
+	<mvc:annotation-driven />
+	<context:annotation-config />
+   	<context:component-scan base-package="edu.uiowa.icts.safeseed" />
+   	
+
+   	
+   	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+	<property name="exceptionMappings">
+		<map>
+			<entry key="DataAccessException" value="error"/>
+		</map>
+	</property>
+	<property name="defaultErrorView" value="error" />
+	
+	</bean>
+   	
+   	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"
+    	p:order="0" />
+   	
+    
+<!--     safeseed_configuration -->
+   <bean id="seqref" class="edu.uiowa.icts.safeseed.core.SeqRefDefaultImpl" init-method="init">
+    <property name="species" value="human" />
+    <property name="potsFilename" value="pots_human_7_05072012.txt" />
+    <property name="mirnaFilename" value="mirna_human_7.txt" />
+    <property name="spsFilename" value="seedsps-20120813.tab" />
+   </bean>
+   
+   <bean id="seqrefmouse" class="edu.uiowa.icts.safeseed.core.SeqRefDefaultImpl" init-method="init">
+    <property name="species" value="mouse" />
+    <property name="potsFilename" value="pots_mouse_7.txt" />
+    <property name="mirnaFilename" value="mirna_mouse_7.txt" />
+    <property name="spsFilename" value="seedsps-20120813.tab" />
+   </bean>
+   
+   
+    <bean id="offTargetBuilder" class="edu.uiowa.icts.safeseed.OffTargetIndexBuilder" init-method="init">
+
+   </bean>
+   
+   
+<!--    done -->
+
+ 	<import resource="view-context.xml" />
+<!-- 	<import resource="hsql-context.xml" />-->
+ 	<import resource="postgres-context.xml" />
+ 	
+	<!--Required for file uploading-->
+ 	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+
+		<!-- one of the properties available; the maximum file size in bytes -->
+		<property name="maxUploadSize" value="104857600" />
+	</bean>
+
+ 	
+	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+	<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
+
+</beans>

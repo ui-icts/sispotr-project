@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="Webapp" path="/Webapp" reloadable="true">
+	<Resource auth="Container" driverClassName="com.mysql.jdbc.Driver"
+		maxActive="20" maxIdle="10" maxWait="-1" name="jdbc/Default"
+		password="funfuninthesun" removeAbandoned="true" testWhileIdle="true"
+		timeBetweenEvictionRunsMillis="60000" type="javax.sql.DataSource"
+		url="jdbc:mysql://localhost/mysql"
+		username="root" validationQuery="select version()" />
+
+</Context>

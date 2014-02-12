@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="SuperAppBackend" path="/SuperAppBackend" reloadable="true">
+	<Resource auth="Container" driverClassName="org.postgresql.Driver"
+		maxActive="20" maxIdle="10" maxWait="-1" name="jdbc/SuperAppBackend"
+		password="${db.passwd}" removeAbandoned="true" testWhileIdle="true"
+		timeBetweenEvictionRunsMillis="60000" type="javax.sql.DataSource"
+		url="${db.url}"
+		username="${db.username}" validationQuery="select version()" />
+
+
+</Context>

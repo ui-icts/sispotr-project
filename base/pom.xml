@@ -163,7 +163,7 @@
   	<dependency>
   		<groupId>edu.uiowa.icts.spring</groupId>
   		<artifactId>spring-utils</artifactId>
-  		<version>0.0.7-SNAPSHOT</version>
+  		<version>0.0.7</version>
   	</dependency>
   	<dependency>
   		<groupId>org.apache.lucene</groupId>

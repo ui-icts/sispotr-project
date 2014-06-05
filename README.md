@@ -16,10 +16,10 @@ siSPOTR Project is made of two major components
 
 ## Build Instructions
 
-  # git clone git@github.com:ui-icts/sispotr-project.git
-  # cd sispotr-project/
-  # mvn install
-  # cp webapp/target/SafeSeed.war <tomcat_dir>/webapps/
+    # git clone git@github.com:ui-icts/sispotr-project.git
+    # cd sispotr-project/
+    # mvn install
+    # cp webapp/target/SafeSeed.war <tomcat_dir>/webapps/
 
 
 

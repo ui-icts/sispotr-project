@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+	
+	<tlib-version>2.1</tlib-version>
+	<short-name>spring-utils</short-name>
+	<uri>http://icts.uiowa.edu/spring-utils</uri>
+
+	<tag>
+		<name>isSwitched</name>
+		<tag-class>edu.uiowa.icts.delegate.SpringSecurityIsSwitched</tag-class>
+		<body-content>JSP</body-content>
+	</tag>
+	
+	<tag>
+		<name>isNotSwitched</name>
+		<tag-class>edu.uiowa.icts.delegate.SpringSecurityIsNotSwitched</tag-class>
+		<body-content>JSP</body-content>
+	</tag>
+	
+	<tag>
+		<name>Username</name>
+		<tag-class>edu.uiowa.icts.delegate.Username</tag-class>
+		<body-content>JSP</body-content>
+	</tag>
+	
+	<tag>
+		<name>PreviousUsername</name>
+		<tag-class>edu.uiowa.icts.delegate.PreviousUsername</tag-class>
+		<body-content>JSP</body-content>
+	</tag>
+	
+	<tag>
+		<name>CookieCheck</name>
+		<tag-class>edu.uiowa.icts.util.CookieCheck</tag-class>
+		<body-content>JSP</body-content>
+		
+		<attribute>
+			<name>cookieName</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<function>
+		<name>username</name>
+		<function-class>edu.uiowa.icts.delegate.UserUid</function-class>
+		<function-signature>java.lang.String username()</function-signature>
+	</function>
+	
+	<function>
+		<name>previousUsername</name>
+		<function-class>edu.uiowa.icts.delegate.UserUid</function-class>
+		<function-signature>java.lang.String previousUsername()</function-signature>
+	</function>
+	
+	<function>
+		<name>hasRole</name>
+		<function-class>edu.uiowa.icts.spring.Security</function-class>
+		<function-signature>java.lang.Boolean hasRole(java.lang.String)</function-signature>
+	</function>
+</taglib>

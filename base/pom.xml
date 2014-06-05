@@ -181,6 +181,8 @@
   	  <groupId>json</groupId>
   	  <artifactId>json</artifactId>
   	  <version>json</version>
+    	  <scope>system</scope>
+          <systemPath>${basedir}/../lib/json-json.jar</systemPath>
   	</dependency>
   	<dependency>
   	  <groupId>jline</groupId>

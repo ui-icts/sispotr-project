@@ -16,6 +16,25 @@
 			<scope>provided</scope>
 		</dependency>
 
+        <dependency>
+                <groupId>edu.uiowa.icts.spring</groupId>
+                <artifactId>spring-utils</artifactId>
+                <version>0.0.7</version>
+        </dependency>
+
+        <dependency>
+          <groupId>json</groupId>
+          <artifactId>json</artifactId>
+          <version>json</version>
+          <scope>system</scope>
+          <systemPath>${basedir}/../lib/json-json.jar</systemPath>
+        </dependency>
+<dependency>
+	<groupId>backport-util-concurrent</groupId>
+	<artifactId>backport-util-concurrent</artifactId>
+	<version>3.1</version>
+</dependency>
+
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>

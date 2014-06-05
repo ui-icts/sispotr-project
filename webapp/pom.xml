@@ -8,38 +8,6 @@
 	<version>0.0.2-SNAPSHOT</version>
 	<name>SafeSeed</name>
 	<url>https://icts.uiowa.edu/confluence/display/apps/SafeSeed</url>
-		<repositories>
-		<repository>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>central</id>
-			<name>libs-release</name>
-			<url>http://www-test.icts.uiowa.edu/artifactory/libs-release</url>
-		</repository>
-		<repository>
-			<snapshots />
-			<id>snapshots</id>
-			<name>libs-snapshot</name>
-			<url>http://www-test.icts.uiowa.edu/artifactory/libs-snapshot</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>central</id>
-			<name>plugins-release</name>
-			<url>http://www-test.icts.uiowa.edu/artifactory/plugins-release</url>
-		</pluginRepository>
-		<pluginRepository>
-			<snapshots />
-			<id>snapshots</id>
-			<name>plugins-snapshot</name>
-			<url>http://www-test.icts.uiowa.edu/artifactory/plugins-snapshot</url>
-		</pluginRepository>
-	</pluginRepositories>
 	<dependencies>
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -204,13 +172,6 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>edu.uiowa.icts.plugin</groupId>
-			<artifactId>protogen-plugin</artifactId>
-			<version>0.0.6-SNAPSHOT</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
 			<version>1.6</version>
@@ -245,18 +206,6 @@
 	<build>
 		<finalName>SafeSeed</finalName>
 		<plugins>
-			<plugin>
-				<groupId>edu.uiowa.icts.plugin</groupId>
-				<artifactId>protogen-plugin</artifactId>
-				<version>0.0.6-SNAPSHOT</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>WebApp</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>

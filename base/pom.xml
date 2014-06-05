@@ -17,51 +17,6 @@
     <developerConnection>scm:svn:https://site/SafeSeed-base/trunk</developerConnection>
     <url>https://site/SafeSeed-base</url>
   </scm>
-  	<repositories>
-		<repository>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>central</id>
-			<name>libs-release</name>
-			<url>http://www-test.icts.uiowa.edu/artifactory/libs-release</url>
-		</repository>
-		<repository>
-			<snapshots />
-			<id>snapshots</id>
-			<name>libs-snapshot</name>
-			<url>http://www-test.icts.uiowa.edu/artifactory/libs-snapshot</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>central</id>
-			<name>plugins-release</name>
-			<url>http://www-test.icts.uiowa.edu/artifactory/plugins-release</url>
-		</pluginRepository>
-		<pluginRepository>
-			<snapshots />
-			<id>snapshots</id>
-			<name>plugins-snapshot</name>
-			<url>http://www-test.icts.uiowa.edu/artifactory/plugins-snapshot</url>
-		</pluginRepository>
-	</pluginRepositories>
-  <distributionManagement>
-    <repository>
-      <id>www-test.icts.uiowa.edu</id>
-      <name>www-test.icts.uiowa.edu-releases</name>
-      <url>https://www-test.icts.uiowa.edu/artifactory/libs-release-local</url>
-    </repository>
-    <snapshotRepository>
-      <id>www-test.icts.uiowa.edu</id>
-      <name>www-test.icts.uiowa.edu-snapshots</name>
-      <url>https://www-test.icts.uiowa.edu/artifactory/libs-snapshot-local</url>
-    </snapshotRepository>
-
-  </distributionManagement>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -7,22 +7,6 @@
 	<name>spring-utils</name>
 	<url>http://www.icts.uiowa.edu</url>
 	
-	<properties>
-	</properties>
-	
-	<scm>
-		<connection>scm:svn:https://srcvault.icts.uiowa.edu/repos/sandbox/spring-utils/tags/spring-utils-0.0.7</connection>
-		<developerConnection>scm:svn:https://srcvault.icts.uiowa.edu/repos/sandbox/spring-utils/tags/spring-utils-0.0.7</developerConnection>
-		<url>scm:svn:https://srcvault.icts.uiowa.edu/repos/sandbox/spring-utils/tags/spring-utils-0.0.7</url>
-	</scm>
-	
-	<distributionManagement>
-		<repository>
-			<id>www-test.icts.uiowa.edu</id>
-			<name>www-test.icts.uiowa.edu-releases</name>
-			<url>https://www-test.icts.uiowa.edu/artifactory/libs-release-local</url>
-		</repository>
-	</distributionManagement>
 	
 	<dependencies>
 		<dependency>
@@ -40,20 +24,6 @@
 			<scope>compile</scope>
 		</dependency>
 		
-		<dependency>
-			<groupId>com.atlassian.jira.plugins</groupId>
-			<artifactId>jira-soapclient</artifactId>
-			<version>0.0.1</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
-		
-		<dependency>
-			<groupId>pdfbox</groupId>
-			<artifactId>pdfbox</artifactId>
-			<version>1.6.0</version>
-			<scope>compile</scope>
-		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>

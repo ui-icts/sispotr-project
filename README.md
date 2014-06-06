@@ -23,3 +23,12 @@ siSPOTR Project is made of two major components
 
 
 
+## Setup Database
+
+1. Update "base/src/non-packaged-resources/database-postgres.properties", the the correct Database URL, username, and password
+1. $ cd base
+1. mvn -p BuildDatabase install
+
+
+
+

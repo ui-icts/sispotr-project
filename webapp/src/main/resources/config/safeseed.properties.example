@@ -1,0 +1,5 @@
+db.dialect=org.hibernate.dialect.PostgreSQLDialect
+db.url=jdbc:postgresql://localhost/safeseed
+db.username=safeseed
+db.password=PASSWORD
+db.driver=org.postgresql.Driver

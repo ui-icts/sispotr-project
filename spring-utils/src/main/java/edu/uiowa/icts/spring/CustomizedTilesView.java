@@ -104,6 +104,11 @@ public class CustomizedTilesView extends AbstractUrlBasedView {
 				
 				path = getUrl().replaceFirst(defName+tilesDefinitionDelimiter, "");
 				logger.debug("Using specified template "+defName+ " with body "+path);
+				if (path.contains("//")) {
+				//	logger.info("1 matched: " + path);
+					path = path.replace("//", "/");
+					//logger.info("new path: " + path);
+				} 
 
 			}
 			/*
@@ -112,6 +117,11 @@ public class CustomizedTilesView extends AbstractUrlBasedView {
 			 */
 			else {
 				path=getUrl();
+       				if (path.contains("//")) {
+                                //      logger.info("1 matched: " + path);
+                                        path = path.replace("//", "/");
+                                        //logger.info("new path: " + path);
+                                }
 				logger.debug("Using default template "+defName+ " with body "+path);
 			}
 			

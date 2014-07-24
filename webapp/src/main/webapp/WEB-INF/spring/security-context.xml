@@ -34,9 +34,9 @@
     </http>
     
     
-    <beans:bean id="myDataSource" class="org.springframework.jndi.JndiObjectFactoryBean" >
-		<beans:property name="jndiName"><beans:value>java:comp/env/jdbc/SafeSeed</beans:value></beans:property>
-	</beans:bean>
+<!--     <beans:bean id="myDataSource" class="org.springframework.jndi.JndiObjectFactoryBean" > -->
+<!-- 		<beans:property name="jndiName"><beans:value>java:comp/env/jdbc/SafeSeed</beans:value></beans:property> -->
+<!-- 	</beans:bean> -->
     
 
     <authentication-manager>
@@ -45,7 +45,7 @@
   		<password-encoder hash="md5">
   		</password-encoder>
 
-			<jdbc-user-service data-source-ref="myDataSource"
+			<jdbc-user-service data-source-ref="dataSource"
 				users-by-username-query="SELECT username, password, 'true' as enabled FROM safeseed.person  WHERE username = ? AND password IS NOT NULL AND password != ''"
 				authorities-by-username-query="SELECT username, access_level as authority FROM safeseed.person  WHERE username = ?"
 				 />

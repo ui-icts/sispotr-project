@@ -32,3 +32,12 @@ siSPOTR Project is made of two major components
 
 
 
+## Running Jetty Appserver
+
+    # cd sispotr-project
+    # mvn package
+    # java -jar  webapp/target/dependency/jetty-runner.jar --path /sispotr --port 9090 webapp/target/*.war
+    # in a browser goto: http://localhost:9090/sispotr
+
+
+

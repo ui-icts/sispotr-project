@@ -163,7 +163,7 @@
   	<dependency>
   		<groupId>edu.uiowa.icts.spring</groupId>
   		<artifactId>spring-utils</artifactId>
-  		<version>0.0.7</version>
+  		<version>0.0.7-LOCAL</version>
   	</dependency>
   	<dependency>
   		<groupId>org.apache.lucene</groupId>
@@ -177,13 +177,12 @@
   	  <artifactId>guava</artifactId>
   	  <version>r09</version>
   	</dependency>
-  	<dependency>
-  	  <groupId>json</groupId>
-  	  <artifactId>json</artifactId>
-  	  <version>json</version>
-    	  <scope>system</scope>
-          <systemPath>${basedir}/../lib/json-json.jar</systemPath>
-  	</dependency>
+  		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20140107</version>
+		</dependency>
+  	
   	<dependency>
   	  <groupId>jline</groupId>
   	  <artifactId>jline</artifactId>
@@ -221,8 +220,8 @@
     		<artifactId>maven-compiler-plugin</artifactId>
     		<version>2.3.2</version>
     		  <configuration>
-        		<source>1.6</source>
-        		<target>1.6</target>
+        		<source>1.7</source>
+        		<target>1.7</target>
     		</configuration>
     		
     	</plugin>
@@ -276,10 +275,6 @@
 		    
 		  </build>
 		  </profile>
- <profile>
-    	<id>UpdateDatabase</id>
-    	
-    </profile>
     <profile>
     	<id>BuildDatabase</id>
     	<build>

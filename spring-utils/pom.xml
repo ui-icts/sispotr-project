@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>edu.uiowa.icts.spring</groupId>
 	<artifactId>spring-utils</artifactId>
-	<version>0.0.7</version>
+	<version>0.0.7-LOCAL</version>
 	<packaging>jar</packaging>
 	<name>spring-utils</name>
 	<url>http://www.icts.uiowa.edu</url>
@@ -228,8 +228,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 
 			</plugin>

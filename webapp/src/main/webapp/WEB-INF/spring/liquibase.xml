@@ -3,6 +3,6 @@
 <beans>
 	<bean class="liquibase.integration.spring.SpringLiquibase" id="liquibase" lazy-init="false">
   		<property name="dataSource" ref="dataSource"/>
-  		<property name="changeLog" value="classpath:schema/db-master.xml"/>
+  		<property name="changeLog" value="classpath:schema/${liquibase.master.file}"/>
 	</bean>
 </beans>

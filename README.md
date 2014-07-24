@@ -19,17 +19,11 @@ siSPOTR Project is made of two major components
     # git clone git@github.com:ui-icts/sispotr-project.git
     # cd sispotr-project/
     # mvn install
-    # cp webapp/target/SafeSeed.war <tomcat_dir>/webapps/
-
-
 
 ## Setup Database
 
-1. Update "base/src/non-packaged-resources/database-postgres.properties", the the correct Database URL, username, and password
-1. $ cd base
-1. mvn -p BuildDatabase install
-
-
+1. copy "webapp/src/main/resources/config/safeseed.properties.example" to webapp/src/main/resources/config/safeseed.properties
+1. Update with your properties, provide the correct Database URL, username, and password
 
 
 ## Running Jetty Appserver

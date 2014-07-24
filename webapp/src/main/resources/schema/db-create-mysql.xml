@@ -9,4 +9,10 @@
 	<changeSet author="default" id="initialDBCreate">
 		<sqlFile path="schema/model-mysql.sql"/>
 	</changeSet>
+
+
+        <changeSet author="default" id="load_default">
+                <sqlFile path="schema/defaults.sql"/>
+        </changeSet>
+
 </databaseChangeLog>

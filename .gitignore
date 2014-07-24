@@ -1,5 +1,7 @@
 target
 
+webapp/src/main/resources/config/safeseed.properties
+
 *.class
 
 # Package Files #

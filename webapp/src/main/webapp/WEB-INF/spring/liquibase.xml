@@ -1,0 +1,8 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean class="liquibase.integration.spring.SpringLiquibase" id="liquibase" lazy-init="false">
+  		<property name="dataSource" ref="dataSource"/>
+  		<property name="changeLog" value="classpath:schema/db-master.xml"/>
+	</bean>
+</beans>

@@ -33,6 +33,7 @@
 	<property name="defaultErrorView" value="error" />
 	
 	</bean>
+
    	
    	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"
     	p:order="0" />
@@ -60,6 +61,7 @@
    
    
 <!--    done -->
+ 	<import resource="liquibase.xml" />
 
  	<import resource="view-context.xml" />
 <!-- 	<import resource="hsql-context.xml" />-->

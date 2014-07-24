@@ -10,9 +10,6 @@
 		<sqlFile path="schema/model-mysql.sql"/>
 	</changeSet>
 
-
-        <changeSet author="default" id="load_default">
-                <sqlFile path="schema/defaults.sql"/>
-        </changeSet>
+        <include file="defaults.xml" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>

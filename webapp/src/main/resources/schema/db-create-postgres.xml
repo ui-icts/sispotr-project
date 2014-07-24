@@ -9,4 +9,5 @@
 	<changeSet author="default" id="initialDBCreate">
 		<sqlFile path="schema/model-postgres.sql"/>
 	</changeSet>
+        <include file="defaults.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>

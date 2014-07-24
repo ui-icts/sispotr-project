@@ -1,8 +1,8 @@
 
 INSERT INTO person (username,guid,domain,email,organization,password,access_level,industry,creation_date) 
-values( 'admin','admin','public','none@email.com', 'c86d41b402412f9af156e9e62e20bcd0',10, 'Academia', now());
+values( 'admin','admin','public','none@email.com', 'MAIN','c86d41b402412f9af156e9e62e20bcd0',10, 'Academia', now());
 
-INSERT INTO site_content VALUES ( '           <h2>With the siSPOTR tools you can:</h2>
+INSERT INTO site_content (content,label, page)  VALUES ( '           <h2>With the siSPOTR tools you can:</h2>
     <ol>
       <li>Identify candidate siRNA/shRNA sequences for your gene of interest with a low potential for off-targeting.</li>
       <li>Evaluate the off-targeting potential for any RNAi sequence.</li>
@@ -10,7 +10,7 @@ INSERT INTO site_content VALUES ( '           <h2>With the siSPOTR tools you can
       <li>BLAST your sequence to search for siRNA-like on/off-targeting</li>
     </ol>
     <br/>', 'index.main', 'index.html');
-INSERT INTO site_content VALUES ('       <h2>Contributors</h2>
+INSERT INTO site_content  (content,label, page)   VALUES ('       <h2>Contributors</h2>
        <p>
        This work is published in the journal of <a  target="_blank" href="http://nar.oxfordjournals.org">Nucleic Acids Research</a>.  
        It was developed by the <a target="_blank" href="http://www.healthcare.uiowa.edu/labs/davidson/">Davidson Laboratory</a> 
@@ -24,7 +24,7 @@ INSERT INTO site_content VALUES ('       <h2>Contributors</h2>
     
        </p> 
        ', 'index.side', 'index.html');
-INSERT INTO site_content VALUES ( '<h3><a href="#">What is considered a good POTS value?</a></h3>
+INSERT INTO site_content  (content,label, page)   VALUES ( '<h3><a href="#">What is considered a good POTS value?</a></h3>
     <div>
       <p>
    For
@@ -82,7 +82,7 @@ INSERT INTO site_content VALUES ( '<h3><a href="#">What is considered a good POT
       strand mean?</a></h3>
     <div>
       <p> This means that these two bases can vary and
-    don''t depend on the target sequence. In the context of siRNA design,
+    don\'t depend on the target sequence. In the context of siRNA design,
     these bases are classically chimeric DNA bases, dTdT. However, if
     these duplexes will be put in the context of a miRNA or shRNA
     shuttle, these nucleotides should match those that are typically at
@@ -94,9 +94,9 @@ INSERT INTO site_content VALUES ( '<h3><a href="#">What is considered a good POT
       conservation" columns in the output?</a></h3>
     <div>
       <p> Many microRNAs (miRNAs)
-    are highly conserved with conserved target sites in mRNA 3''UTRs.
+    are highly conserved with conserved target sites in mRNA 3\'UTRs.
     Target site conservation tends to the most predictive factor of site
-    functionality. These columns show whether the siRNA''s seed sequence
+    functionality. These columns show whether the siRNA\'s seed sequence
     matches the seed sequence of a known miRNA. H(uman), M(ouse) and
     D(og) in the conservation column give a sense of how conserved the
     miRNA is. H, M or D alone means that the miRNA is restricted to a
@@ -130,7 +130,7 @@ INSERT INTO site_content VALUES ( '<h3><a href="#">What is considered a good POT
     </div>
 
     <h3><a href="#">My siRNA has a low POTS. Why is it killing my
-      cells? / My siRNA has a high POTS, but I haven''t noticed any
+      cells? / My siRNA has a high POTS, but I haven\'t noticed any
       problems. Should I be concerned?</a></h3>
     <div>
       <p>POTS cannot determine
@@ -154,15 +154,15 @@ INSERT INTO site_content VALUES ( '<h3><a href="#">What is considered a good POT
           </p>
     </div>
 
-    <h3><a href="#">I didn''t get any sequences with POTS less than 30.
+    <h3><a href="#">I didn\'t get any sequences with POTS less than 30.
       What should I do?</a></h3>
     <div>
       <p> 30 should not be thought of as a strict
     cutoff. If you need to go higher, test just as you would siRNAs with
     lower POTS. If you include proper controls, find no toxicity and
     your results seem specific to knockdown of your target gene, you can
-    feel confident with your results. Alternatively, decrease G/C''s
-    required at 5'' end of passenger or widen slightly G/C% to loosen the
+    feel confident with your results. Alternatively, decrease G/C\'s
+    required at 5\' end of passenger or widen slightly G/C% to loosen the
     potency filtering options further. Additional testing will need to
     be done to ensure proper strand loading and efficacy.
   </p>
@@ -171,11 +171,11 @@ INSERT INTO site_content VALUES ( '<h3><a href="#">What is considered a good POT
       &lt; 30. How can I shrink my list?</strong><br />
   <ol>
     <li>Modify input criteria: You can click the "Update
-      parameters" button and modify your input criteria. Maximize G/C''s
-      required at 5'' end of passenger or limit to a lower G/C content.</li>
+      parameters" button and modify your input criteria. Maximize G/C\'s
+      required at 5\' end of passenger or limit to a lower G/C content.</li>
     <li>Look at the regions targeted by the siRNAs: Pick sequences
       that do not target regions with SNPs or differentially-spliced
-      exons. You can also search for siRNAs targeting the 3''UTR to
+      exons. You can also search for siRNAs targeting the 3\'UTR to
       facilitate rescue experiments, since you do not have to do
       site-directed mutagenesis.</li>
     <li>Pick the most potent sequences: Look in the literature or
@@ -191,7 +191,7 @@ INSERT INTO site_content VALUES ( '<h3><a href="#">What is considered a good POT
     <div>
       <p> 
     The actual POTS will differ slightly between species simply because
-    of differences in the number and length of 3''UTR sequences. Based on
+    of differences in the number and length of 3\'UTR sequences. Based on
     POTS comparison between human and mouse, the rank-order of the seeds
     do not significantly change. In other words, a low POTS in mouse
     tends to be low in human. That being said, previous research has
@@ -202,19 +202,19 @@ INSERT INTO site_content VALUES ( '<h3><a href="#">What is considered a good POT
   </p>
     </div>
 
-    <h3><a href="#"> Since POTS is calculated based on all 3''UTRs will
+    <h3><a href="#"> Since POTS is calculated based on all 3\'UTRs will
       off-targeting potential be different in different cells and
       tissues?</a></h3>
     <div>
       <p> We have calculated tissue-specific POTS based on
     expression data from 177 different human tissues and cell lines,
-    using 3''UTR sequences only for the transcripts present in each
+    using 3\'UTR sequences only for the transcripts present in each
     tissue. Because POTS is based on the number of target sites, the
     POTS value differs in each tissue depending on the number of
     expressed transcripts; however, there was no significant change in
     POTS rank order. In other words, the order of siRNAs ranked by POTS
-    using all 3''UTR sequences varied little with the order using only
-    the 3''UTRs present in a specific tissue. That being said, we
+    using all 3\'UTR sequences varied little with the order using only
+    the 3\'UTRs present in a specific tissue. That being said, we
     acknowledge that in an experimental setting the specific
     off-targeted genes, and therefore the off-target effects, will
     likely be different. The provided lists of all off-targets can be
@@ -247,7 +247,7 @@ INSERT INTO site_content VALUES ( '<h3><a href="#">What is considered a good POT
     or the same gene in another species.
   </p>
 </div>', 'help.faq', 'help.html');
-INSERT INTO site_content VALUES (' <h2>siRNA POTS Lookup</h2>
+INSERT INTO site_content  (content,label, page)   VALUES (' <h2>siRNA POTS Lookup</h2>
     <div class="tabs">
   <ul>
     <li><a href="#summary2">Summary</a></li>
@@ -377,7 +377,7 @@ NOTE: For multiple sequences, enter one per line.
    </div>
 </div>
 ', 'toolinfo.sirnalookup', 'tools.html');
-INSERT INTO site_content VALUES ( '<h2>Additional Features</h2>
+INSERT INTO site_content  (content,label, page)   VALUES ( '<h2>Additional Features</h2>
    These options are available in <strong>both tools</strong> by clicking the "Off-Target Details" button on the result of interest.
     <br/>
      <br/><p>
@@ -404,7 +404,7 @@ INSERT INTO site_content VALUES ( '<h2>Additional Features</h2>
          <strong>Run BLAST search:</strong><br/>
           This is a link to the NCBI nucleotide blast page. In addition
           to seed-mediated off-targets, siRNAs can have more extensive
-          binding to mRNAs outside of the 3''UTR. The option to search
+          binding to mRNAs outside of the 3\'UTR. The option to search
           the full 21-mer, or the core 18-mer are provided (p1 and
           p20/21 mismatches often show negligible impact on silencing
           efficacy). Previous studies have suggested avoiding hits with
@@ -414,7 +414,7 @@ INSERT INTO site_content VALUES ( '<h2>Additional Features</h2>
           to known gene paralogs or to see if your sequence would likely
           target the orthologous transcript in another species.
           </p>', 'toolinfo.addinfo', 'tools.html');
-INSERT INTO site_content VALUES ( '<h2>siSPOTR - siRNA Design Tool</h2>
+INSERT INTO site_content  (content,label, page)   VALUES ( '<h2>siSPOTR - siRNA Design Tool</h2>
 <div class="tabs">
   <ul>
     <li><a href="#summary1">Summary</a></li>
@@ -469,7 +469,7 @@ INSERT INTO site_content VALUES ( '<h2>siSPOTR - siRNA Design Tool</h2>
        <div>
        <p>
        Shows what percent of the siRNA
-      sequence is composed of G''s and C''s. Default criteria set a
+      sequence is composed of G\'s and C\'s. Default criteria set a
       generous range of 20-70%. Potent siRNAs have been found with G/C
       content in this range.
       </p>
@@ -561,7 +561,7 @@ INSERT INTO site_content VALUES ( '<h2>siSPOTR - siRNA Design Tool</h2>
 
    </div>
 ', 'toolinfo.sirna', 'tools.html');
-INSERT INTO site_content VALUES (''    <h2>Overview</h2>
+INSERT INTO site_content  (content,label, page)   VALUES ('    <h2>Overview</h2>
     <p>siSPOTR is a RNAi design tool that produces candidate siRNAs and shRNA with the lowest off-targeting potential for a given target transcript. Instructions </p>
 
 
@@ -578,13 +578,13 @@ INSERT INTO site_content VALUES (''    <h2>Overview</h2>
     <ul>
       <li><strong>GC Content (%Min/Max):</strong> Filters candidate
         sequences based on specified GC content range.</li>
-      <li><strong>5'' Passenger G/C Number:</strong> Forces the
-        passenger strand to have high 5'' end stability. This decreases
+      <li><strong>5\' Passenger G/C Number:</strong> Forces the
+        passenger strand to have high 5\' end stability. This decreases
         likelihood of loading the unintended (passenger) strand.
         Additional parameters to promote guide strand loading are
         automatically included in the design.</li>
       <li><strong>Pol III Expression:</strong> Removes sequences
-        with &ge;4 T/U''s. Stretches of 4 or more U''s can serve as a
+        with &ge;4 T/U\'s. Stretches of 4 or more U\'s can serve as a
         termination signal for RNA Pol III. Since many shRNA/artificial
         miRNA expression vectors use Pol III promoters (e.g. U6, H1) to
         drive expression, these sequences should be avoided to prevent
@@ -603,7 +603,7 @@ INSERT INTO site_content VALUES (''    <h2>Overview</h2>
         site-type information</li>
     </ul></li>
 </ol>', 'designpage.overview', 'tools/sispotr/design.html');
-INSERT INTO site_content VALUES (83, '  <div id="helpcontent" style="float:left;width:55%;padding:10px;">
+INSERT INTO site_content  (content,label, page)   VALUES ( '  <div id="helpcontent" style="float:left;width:55%;padding:10px;">
   <h3>Output</h3>
           <p>The output provides the actual sense and antisense sequences
       to order, making appropriate sequence modifications to improve
@@ -623,7 +623,7 @@ INSERT INTO site_content VALUES (83, '  <div id="helpcontent" style="float:left;
   <a href="../../../tools.html" target="_blank">Additional Info</a>
         </div>
 ', 'resultssirna.help', 'tools/sispotr/displayResults.html?type=sirna');
-INSERT INTO site_content VALUES (74, '		  <th>
+INSERT INTO site_content  (content,label, page)   VALUES ( '		  <th>
 		  
 		  <a class="pop-right" rel="tooltip" data-original-title="Off-Target Details" 
           data-content="BLAST sequence, POTS score details, off-target list" 
@@ -684,7 +684,7 @@ Guide (Antisense)
         
           <th>
           <a   class="pop-right" class="pop-right" rel="tooltip" data-original-title="Passenger (Sense)" 
-          data-content="Target sequence. Lowercase indicates G:U wobble creation. ''dTdT'' can replace ''NN'' when ordering oligos." >
+          data-content="Target sequence. Lowercase indicates G:U wobble creation. \'dTdT\' can replace \'NN\' when ordering oligos." >
 
 Passenger (Sense)
           <i class="icon-question-sign"></i></a>

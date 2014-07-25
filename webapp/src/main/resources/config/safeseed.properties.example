@@ -1,6 +1,17 @@
-db.dialect=org.hibernate.dialect.PostgreSQLDialect
-db.url=jdbc:postgresql://localhost/safeseed
+###### POSTGRES ######
+#db.dialect=org.hibernate.dialect.PostgreSQLDialect
+#db.url=jdbc:postgresql://localhost/safeseed
+#db.username=safeseed
+#db.password=PASSWORD
+#db.driver=org.postgresql.Driver
+#liquibase.master.file=db-create-postgres.xml
+
+
+###### MYSQL ######
+db.dialect=org.hibernate.dialect.MySQL5Dialect
+db.url=jdbc:mysql://localhost:3306/safeseed
 db.username=safeseed
 db.password=PASSWORD
-db.driver=org.postgresql.Driver
+db.driver=com.mysql.jdbc.Driver
+
 liquibase.master.file=db-create-mysql.xml

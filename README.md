@@ -37,3 +37,4 @@ siSPOTR Project is made of two major components
 
 
 
+[![Build Status](https://travis-ci.org/ui-icts/sispotr-project.svg?branch=master)](https://travis-ci.org/ui-icts/sispotr-project/)

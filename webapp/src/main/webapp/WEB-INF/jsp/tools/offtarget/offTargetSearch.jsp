@@ -12,7 +12,7 @@
     spreadsheet.</p>
 
 <div class="button">
-<a class="btn" href="offTargetSearchExport.html?7mer=${sevenmer}&type=a&format=csv">Export to CSV</a>
+<a class="btn" href="offTargetSearchExport.html?7mer=${sevenmer}&type=a&format=csv&species=${species}">Export to CSV</a>
 </div>
 <br/>
 <p>Species: ${species}</p>

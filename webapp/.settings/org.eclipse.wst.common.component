@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project-modules id="moduleCoreId" project-version="1.5.0">
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
     <wb-module deploy-name="Archtype-spring-webapp">
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
 	<wb-resource deploy-path="/META-INF" source-path="/src/eclipse/META-INF"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+        <dependent-module archiveName="spring-utils-0.0.7-LOCAL.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/spring-utils/spring-utils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="SafeSeed-base-0.0.2-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/SafeSeed-base/SafeSeed-base">
             <dependency-type>uses</dependency-type>
         </dependent-module>

@@ -7,6 +7,7 @@
 
 <changeSet author="default" id="admin_user">
  <insert tableName="person">
+ <column name="person_id">1</column>
  <column name="username">admin</column>
  <column name="guid">admin</column>
  <column name="domain">public</column>
@@ -20,6 +21,7 @@
 
 <changeSet author="default" id="site_content_1">
  <insert tableName="site_content">
+   <column name="site_content_id">100</column>
    <column name="label">index.main</column>
    <column name="page">index.html</column>
    <column name="content"><![CDATA[ 
@@ -40,6 +42,7 @@
 
 <changeSet author="default" id="site_content_2">
  <insert tableName="site_content">
+   <column name="site_content_id">101</column>
    <column name="label">help.faq</column>
    <column name="page">help.html</column>
    <column name="content"><![CDATA[
@@ -274,6 +277,7 @@
 
 <changeSet author="default" id="site_content_3">
  <insert tableName="site_content">
+   <column name="site_content_id">102</column>
    <column name="label">toolinfo.sirnalookup</column>
    <column name="page">tools.html</column>
    <column name="content"><![CDATA[
@@ -412,6 +416,7 @@ NOTE: For multiple sequences, enter one per line.
 
 <changeSet author="default" id="site_content_4">
  <insert tableName="site_content">
+   <column name="site_content_id">103</column>
    <column name="label">toolinfo.addinfo</column>
    <column name="page">tools.html</column>
    <column name="content"><![CDATA[
@@ -459,6 +464,7 @@ NOTE: For multiple sequences, enter one per line.
 
 <changeSet author="default" id="site_content_5">
  <insert tableName="site_content">
+   <column name="site_content_id">104</column>
    <column name="label">toolinfo.sirna</column>
    <column name="page">tools.html</column>
    <column name="content"><![CDATA[
@@ -615,6 +621,7 @@ NOTE: For multiple sequences, enter one per line.
 
 <changeSet author="default" id="site_content_6">
  <insert tableName="site_content">
+   <column name="site_content_id">106</column>
    <column name="label">designpage.overview</column>
    <column name="page">tools/sispotr/design.html</column>
    <column name="content"><![CDATA[
@@ -666,6 +673,7 @@ NOTE: For multiple sequences, enter one per line.
 
 <changeSet author="default" id="site_content_7">
  <insert tableName="site_content">
+   <column name="site_content_id">107</column>
    <column name="label">resultstable.header</column>
    <column name="page">tools/sispotr/displayResults.html?type=sirna</column>
    <column name="content"><![CDATA[

@@ -78,9 +78,9 @@
 <span class="caret"></span>
     </a>
     <ul class="dropdown-menu">
-   <li> <a title="BLAST Search" target="_blank" href="http://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastSearch&PROG_DEF=blastn&BLAST_PROG_DEF=megaBlast&SHOW_DEFAULTS=on&DATABASE=refseq_rna&QUERY=${row[5]}">Run BLAST search on 21mer</a></li>
+   <li> <a title="BLAST Search" target="_blank" href="http://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastSearch&PROG_DEF=blastn&BLAST_PROG_DEF=megaBlast&SHOW_DEFAULTS=on&DATABASE=refseq_rna&QUERY=${row[4]}">Run BLAST search on 21mer</a></li>
 <li>
-<a  title="BLAST Search 18mer" target="_blank" href="http://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastSearch&PROG_DEF=blastn&BLAST_PROG_DEF=megaBlast&SHOW_DEFAULTS=on&DATABASE=refseq_rna&QUERY=${fn:substring(row[5],1,fn:length(row[5])-2)}">
+<a  title="BLAST Search 18mer" target="_blank" href="http://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastSearch&PROG_DEF=blastn&BLAST_PROG_DEF=megaBlast&SHOW_DEFAULTS=on&DATABASE=refseq_rna&QUERY=${fn:substring(row[4],1,fn:length(row[4])-2)}">
 Run BLAST search on 18mer (2-19)</a>
 </li>
 <li>
